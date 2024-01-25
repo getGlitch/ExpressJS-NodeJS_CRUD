@@ -1,0 +1,29 @@
+<%- include('partials/_header')%>
+    <a href="/" class="btn btn-primary link">All Users</a>
+    <!-- Table section -->
+    <div class="body-form">
+        <!-- <a href="/add-user" class="btn btn-primary link">Add User</a> -->
+
+        <form method="post" id="update_user">
+            <div class="form-body">
+                <h4>Update Details</h4>
+                <input class="input-field" type="hidden" name="id" id="id" value="<%=updateData._id%>">
+                <input class="input-field" type="text" name="name" id="name" placeholder="Enter Name..."
+                    value="<%=updateData.name%>">
+                <input class="input-field" type="email" name="email" id="email" placeholder="Enter Email..."
+                    value="<%=updateData.email%>">
+                <input class="input-field" type="text" name="contact" id="contact" placeholder="Enter Contact..."
+                    value="<%=updateData.contact%>">
+                <div class="gender">
+                    <label>Gender : </label>
+                    <input type="radio" name="gender" id="Male" value="Male" <%=updateData.gender=="Male" ? "checked"
+                        : "" %>><span>Male</span>
+                    <input type="radio" name="gender" id="Female" value="Female" <%=updateData.gender=="Female"
+                        ? "checked" : "" %>><span>Female</span>
+                </div>
+
+                <input class="input-field" type="submit" class="btn btn-warning submit">
+        </form>
+    </div>
+
+    <%- include('partials/_footer')%>

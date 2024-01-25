@@ -1,0 +1,32 @@
+<%- include('partials/_header')%>
+    <a href="/add-user" class="btn btn-primary link">Add User</a>
+    <!-- Table section -->
+    <div class="body-table">
+        <!-- <a href="/add-user" class="btn btn-primary link">Add User</a> -->
+        <form action="/" method="post">
+            <table>
+                <thead>
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+
+
+                </thead>
+                <tbody>
+                    <%- include('partials/_showtable')%>
+                </tbody>
+            </table>
+        </form>
+
+
+
+    </div>
+
+
+    <%- include('partials/_footer')%>
